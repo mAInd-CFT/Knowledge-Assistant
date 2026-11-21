@@ -1,0 +1,186 @@
+services:
+  postgres:
+    image: postgres:16-alpine
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER:?Set POSTGRES_USER in .env}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?Set POSTGRES_PASSWORD in .env}
+      POSTGRES_DB: ${POSTGRES_DB:?Set POSTGRES_DB in .env}
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U $${POSTGRES_USER} -d $${POSTGRES_DB}"]
+      interval: 5s
+      timeout: 3s
+      retries: 20
+      start_period: 10s
+    networks: [agent_net]
+
+  qdrant:
+    image: qdrant/qdrant:v1.12.0
+    restart: unless-stopped
+    volumes:
+      - qdrantdata:/qdrant/storage
+    healthcheck:
+      test: ["CMD-SHELL", "bash -c ':> /dev/tcp/127.0.0.1/6333'"]
+      interval: 5s
+      timeout: 3s
+      retries: 20
+      start_period: 10s
+    networks: [agent_net]
+
+  ingestion:
+    profiles: ["ingest"]
+    build:
+      context: ./backend
+      dockerfile: Dockerfile.ingest
+    restart: "no"
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER:?Set POSTGRES_USER in .env}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?Set POSTGRES_PASSWORD in .env}
+      POSTGRES_DB: ${POSTGRES_DB:?Set POSTGRES_DB in .env}
+      POSTGRES_HOST: postgres
+      POSTGRES_PORT: ${POSTGRES_PORT:-5432}
+      QDRANT_HOST: qdrant
+      QDRANT_PORT: ${QDRANT_PORT:-6333}
+      QDRANT_COLLECTION: ${QDRANT_COLLECTION:-knowledge_chunks_e5_large_v2}
+      EMBEDDING_MODEL: ${EMBEDDING_MODEL:-intfloat/multilingual-e5-large}
+      EMBEDDING_DIM: ${EMBEDDING_DIM:-1024}
+      EMBEDDING_BATCH_SIZE: ${EMBEDDING_BATCH_SIZE:-32}
+      EMBEDDING_THREADS: ${EMBEDDING_THREADS:-2}
+      CRAWL_ALLOWED_DOMAINS: ${CRAWL_ALLOWED_DOMAINS:-cft.ru}
+      CRAWL_APPROVED_EXTERNAL_DOMAINS: ${CRAWL_APPROVED_EXTERNAL_DOMAINS:-}
+      FASTEMBED_CACHE_PATH: /modelcache
+      HOME: /modelcache
+    volumes:
+      - ./data/raw:/app/data/raw:ro
+      - ./data/processed:/app/data/processed
+      - modelcache:/modelcache
+    depends_on:
+      postgres:
+        condition: service_healthy
+      qdrant:
+        condition: service_healthy
+    networks: [agent_net]
+
+  ingestion-ocr:
+    profiles: ["ingest-ocr"]
+    build:
+      context: ./backend
+      dockerfile: Dockerfile.ingest-ocr
+    restart: "no"
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER:?Set POSTGRES_USER in .env}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?Set POSTGRES_PASSWORD in .env}
+      POSTGRES_DB: ${POSTGRES_DB:?Set POSTGRES_DB in .env}
+      POSTGRES_HOST: postgres
+      POSTGRES_PORT: ${POSTGRES_PORT:-5432}
+      QDRANT_HOST: qdrant
+      QDRANT_PORT: ${QDRANT_PORT:-6333}
+      QDRANT_COLLECTION: ${QDRANT_COLLECTION:-knowledge_chunks_e5_large_v2}
+      EMBEDDING_MODEL: ${EMBEDDING_MODEL:-intfloat/multilingual-e5-large}
+      EMBEDDING_DIM: ${EMBEDDING_DIM:-1024}
+      EMBEDDING_BATCH_SIZE: ${EMBEDDING_BATCH_SIZE:-32}
+      EMBEDDING_THREADS: ${EMBEDDING_THREADS:-2}
+      CRAWL_ALLOWED_DOMAINS: ${CRAWL_ALLOWED_DOMAINS:-cft.ru}
+      CRAWL_APPROVED_EXTERNAL_DOMAINS: ${CRAWL_APPROVED_EXTERNAL_DOMAINS:-}
+      FASTEMBED_CACHE_PATH: /modelcache
+      HOME: /modelcache
+      DOCLING_ARTIFACTS_PATH: /opt/docling/models
+      DOCLING_DEVICE: cpu
+      DOCLING_NUM_THREADS: 2
+    volumes:
+      - ./data/raw:/app/data/raw:ro
+      - ./data/processed:/app/data/processed
+      - modelcache:/modelcache
+    depends_on:
+      postgres:
+        condition: service_healthy
+      qdrant:
+        condition: service_healthy
+    networks: [agent_net]
+
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    restart: unless-stopped
+    init: true
+    env_file: [.env]
+    environment:
+      POSTGRES_HOST: postgres
+      QDRANT_HOST: qdrant
+      FASTEMBED_CACHE_PATH: /modelcache
+      EMBEDDING_MODEL: ${EMBEDDING_MODEL:-intfloat/multilingual-e5-large}
+      EMBEDDING_DIM: ${EMBEDDING_DIM:-1024}
+      EMBEDDING_BATCH_SIZE: ${EMBEDDING_BATCH_SIZE:-32}
+      EMBEDDING_THREADS: ${EMBEDDING_THREADS:-2}
+      QDRANT_COLLECTION: ${QDRANT_COLLECTION:-knowledge_chunks_e5_large_v2}
+    depends_on:
+      postgres:
+        condition: service_healthy
+      qdrant:
+        condition: service_healthy
+    volumes:
+      - modelcache:/modelcache
+      - ./data/raw:/app/data/raw:ro
+    networks: [agent_net]
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8000/health/ready', timeout=4)"]
+      interval: 15s
+      timeout: 6s
+      retries: 8
+      start_period: 90s
+    stop_grace_period: 30s
+    # Compose resource guardrails; tune against the deployment host.
+    mem_limit: 4g
+    cpus: 2.0
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    restart: unless-stopped
+    ports:
+      - "127.0.0.1:${FRONTEND_PORT:-8080}:80"
+    depends_on:
+      backend:
+        condition: service_healthy
+    networks: [agent_net]
+    healthcheck:
+      test: ["CMD-SHELL", "wget -q -O /dev/null http://127.0.0.1/ || exit 1"]
+      interval: 15s
+      timeout: 5s
+      retries: 5
+
+  crawler:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile.crawler
+    restart: "no"
+    profiles: ["crawl"]
+    command: ["python", "-m", "ingest.crawler"]
+    environment:
+      CRAWL_START_URLS: ${CRAWL_START_URLS:-https://www.cft.ru/}
+      CRAWL_MAX_PAGES: ${CRAWL_MAX_PAGES:-300}
+      CRAWL_MAX_DEPTH: ${CRAWL_MAX_DEPTH:-2}
+      CRAWL_DOWNLOAD_TIMEOUT: ${CRAWL_DOWNLOAD_TIMEOUT:-30}
+      CRAWL_MAX_DOWNLOAD_MB: ${CRAWL_MAX_DOWNLOAD_MB:-25}
+      CRAWL_CONCURRENT_REQUESTS: ${CRAWL_CONCURRENT_REQUESTS:-6}
+      CRAWL_CONCURRENT_PER_DOMAIN: ${CRAWL_CONCURRENT_PER_DOMAIN:-2}
+      CRAWL_DOWNLOAD_DELAY: ${CRAWL_DOWNLOAD_DELAY:-1.0}
+      CRAWL_LOG_LEVEL: ${CRAWL_LOG_LEVEL:-INFO}
+      CRAWL_ALLOWED_DOMAINS: ${CRAWL_ALLOWED_DOMAINS:-cft.ru}
+    volumes:
+      - ./data/raw:/app/data/raw
+      - ./data/processed:/app/data/processed
+    networks: [agent_net]
+
+volumes:
+  pgdata:
+  qdrantdata:
+  modelcache:
+
+networks:
+  agent_net:
+    driver: bridge
