@@ -1,0 +1,11 @@
+{
+  "url": "https://login.cft.ru/adfs/ls/?wa=wsignin1.0&wreply=https%3A%2F%2Fwww.cft.ru%2Fpages%2Fplatforma_dbi&wtrealm=https%3A%2F%2Fwww.cft.ru",
+  "title": "Sign In",
+  "content_type": "text/plain",
+  "content_sha256": "c9e22b4f7652dc6666189a83fcca7b1de2f9d738d3ef045746072d90130e851e",
+  "etag": null,
+  "last_modified": null,
+  "last_seen_run": "15e83012-fb9b-4c27-a059-1311e84fcaa2",
+  "retrieved_at": "2026-11-21T19:50:15.737830+00:00",
+  "kind": "download"
+}

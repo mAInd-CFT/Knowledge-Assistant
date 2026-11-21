@@ -1,0 +1,11 @@
+{
+  "url": "https://login.cft.ru/adfs/ls/?wa=wsignin1.0&wreply=https%3A%2F%2Fwww.cft.ru%2Fpages%2Fapps_archive&wtrealm=https%3A%2F%2Fwww.cft.ru",
+  "title": "Sign In",
+  "content_type": "text/plain",
+  "content_sha256": "cb7f13a7e2569fba020374b421cf030062a83c5c40415d09b75c6e0673137a2f",
+  "etag": null,
+  "last_modified": null,
+  "last_seen_run": "15e83012-fb9b-4c27-a059-1311e84fcaa2",
+  "retrieved_at": "2026-11-21T19:49:55.556476+00:00",
+  "kind": "download"
+}

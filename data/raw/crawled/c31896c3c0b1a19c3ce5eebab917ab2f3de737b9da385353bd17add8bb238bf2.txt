@@ -1,0 +1,161 @@
+URL: https://www.cft.ru/pages/technologies
+TITLE: Используемые  технологии
+PUBLISHED_AT: 
+
+- Вход
+
+- /
+
+- Регистрация
+
+- Каталоги решений и продуктов ЦФТ
+
+- Учебный центр ЦФТ
+
+## Используемые технологии
+
+- Языки программирования: Backend: PlPlus, PL/SQL, Java/Kotlin, JavaScript, С++, С, C#, VisualBasic, Go Веб - разработка : Vue, JavaScript/TypeScript;
+
+- Backend: PlPlus, PL/SQL, Java/Kotlin, JavaScript, С++, С, C#, VisualBasic, Go
+
+- Веб - разработка : Vue, JavaScript/TypeScript;
+
+- Среды разработки и фреймворки Backend: Eclipse IDE, IntelliJ IDEA, Spring, GoLand Веб - разработка : Npm, Svelte, Angular, Yarn, IntelliJ IDEA, Visual studio code
+
+- Backend: Eclipse IDE, IntelliJ IDEA, Spring, GoLand
+
+- Веб - разработка : Npm, Svelte, Angular, Yarn, IntelliJ IDEA, Visual studio code
+
+- ОС Linux Microsoft Windows MacOS
+
+- Linux
+
+- Microsoft Windows
+
+- MacOS
+
+- Системы управления базами данных Postgre SQL, PostgresPro, FT-Data Oracle Database Ignite Clickhouse Redis Valkey KeyDB H2
+
+- Postgre SQL, PostgresPro, FT-Data
+
+- Oracle Database
+
+- Ignite
+
+- Clickhouse
+
+- Redis
+
+- Valkey
+
+- KeyDB
+
+- H2
+
+- Инструменты для тестирования и установки ПО Postman Testify Go Testing GoConvey Apache JMeter Selenium Jenkins Atlassian Bamboo Artifactory Swagger Playwrigh
+
+- Postman
+
+- Testify
+
+- Go Testing
+
+- GoConvey
+
+- Apache JMeter
+
+- Selenium
+
+- Jenkins
+
+- Atlassian Bamboo
+
+- Artifactory
+
+- Swagger
+
+- Playwrigh
+
+- Вспомогательные сервисы по обработке и администрированию данных, , инфраструктурные компоненты GitLab Kubernetes Docker Nginx DBeaver PGAdmin PLSQL Developer SQL Developer RabbitMQ ActiveMQ Apache Kafka Keycloak Help&Manual
+
+- GitLab
+
+- Kubernetes
+
+- Docker
+
+- Nginx
+
+- DBeaver
+
+- PGAdmin
+
+- PLSQL Developer
+
+- SQL Developer
+
+- RabbitMQ
+
+- ActiveMQ
+
+- Apache Kafka
+
+- Keycloak
+
+- Help&Manual
+
+- Прайс-лист Акции Архивные материалы Корпоративному сектору Партнерам
+
+Прайс-лист
+
+Акции
+
+Архивные материалы
+
+Корпоративному сектору
+
+Партнерам
+
+- Новости и публикации Мероприятия Контакты Учебный центр ЦФТ Карьера
+
+Новости и публикации
+
+Мероприятия
+
+Контакты
+
+Учебный центр ЦФТ
+
+Карьера
+
+- ИТ-аккредитация О компании Реквизиты Решения в Рeестрe РПО ПО с исключительными правами Используемые технологии Каталог решений и продуктов Приложения Архитектура и платформы
+
+ИТ-аккредитация
+
+О компании
+
+Реквизиты
+
+Решения в Рeестрe РПО
+
+ПО с исключительными правами
+
+Используемые технологии
+
+Каталог решений и продуктов
+
+Приложения
+
+Архитектура и платформы
+
+- Запуск, услуги АПК Сопровождение
+
+Запуск, услуги АПК
+
+Сопровождение
+
+Политика в области обработки персональных данных
+
+Управление файлами cookie
+
+Присоединяйтесь к нам:

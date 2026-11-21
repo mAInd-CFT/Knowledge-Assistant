@@ -1,0 +1,17 @@
+URL: https://login.cft.ru/adfs/ls/?wa=wsignin1.0&wreply=https%3A%2F%2Fwww.cft.ru%2Fpages%2Fpartners&wtrealm=https%3A%2F%2Fwww.cft.ru
+TITLE: Sign In
+PUBLISHED_AT: 
+
+Sign in
+
+User Account
+
+Password
+
+Keep me signed in
+
+Sign in
+
+Зарегистрироваться
+
+Забыли пароль?
