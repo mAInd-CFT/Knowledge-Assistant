@@ -1,0 +1,19 @@
+FROM python:3.11-slim
+
+ENV PYTHONDONTWRITEBYTECODE=1 \
+    PYTHONUNBUFFERED=1 \
+    PIP_NO_CACHE_DIR=1 \
+    PIP_DISABLE_PIP_VERSION_CHECK=1 \
+    FASTEMBED_CACHE_PATH=/modelcache
+
+RUN apt-get update && apt-get install -y --no-install-recommends libgomp1 \
+    && rm -rf /var/lib/apt/lists/*
+
+WORKDIR /app
+COPY requirements-ingest.txt ./
+RUN pip install -r requirements-ingest.txt
+COPY app ./app
+COPY ingest ./ingest
+RUN mkdir -p /app/data/raw /app/data/processed /modelcache && chmod 0777 /modelcache
+
+CMD ["python", "-m", "ingest.run"]

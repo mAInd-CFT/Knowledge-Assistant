@@ -1,0 +1,4 @@
+-r requirements-ingest.txt
+# Тяжёлый OCR/layout нужен только для сканированных и смешанных PDF.
+# CPU wheels выбираются через --extra-index-url в Dockerfile.ingest-ocr.
+docling==2.151.1

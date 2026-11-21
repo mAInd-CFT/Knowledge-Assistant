@@ -1,0 +1,30 @@
+FROM python:3.11-slim
+
+ENV PYTHONDONTWRITEBYTECODE=1 \
+    PYTHONUNBUFFERED=1 \
+    PIP_NO_CACHE_DIR=1 \
+    PIP_DISABLE_PIP_VERSION_CHECK=1 \
+    FASTEMBED_CACHE_PATH=/modelcache \
+    DOCLING_DEVICE=cpu \
+    DOCLING_NUM_THREADS=2 \
+    DOCLING_ARTIFACTS_PATH=/opt/docling/models
+
+RUN apt-get update && apt-get install -y --no-install-recommends libgomp1 \
+    && rm -rf /var/lib/apt/lists/*
+
+WORKDIR /app
+COPY requirements-ingest.txt requirements-ingest-ocr.txt ./
+# CPU-only PyTorch. Download Docling artifacts at image-build time so runtime
+# does not depend on an empty or incorrectly mounted model-cache directory.
+RUN pip install --extra-index-url https://download.pytorch.org/whl/cpu -r requirements-ingest-ocr.txt \
+    && mkdir -p /opt/docling/models \
+    && docling-tools models download --output-dir /opt/docling/models \
+    && docling-tools models download rapidocr --rapidocr-backend-lang onnxruntime:cyrillic -o /opt/docling/models \
+    && test -d /opt/docling/models/RapidOcr \
+    && test "$(find /opt/docling/models/RapidOcr -type f -name '*.onnx' | wc -l)" -ge 2
+
+COPY app ./app
+COPY ingest ./ingest
+RUN mkdir -p /app/data/raw /app/data/processed /modelcache && chmod 0777 /modelcache
+
+CMD ["python", "-m", "ingest.run"]
