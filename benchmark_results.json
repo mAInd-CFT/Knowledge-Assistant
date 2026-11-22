@@ -1,0 +1,1015 @@
+{
+  "generated_at": "2026-11-22T01:45:52.292045+00:00",
+  "collection": "knowledge_chunks_e5_large_v2",
+  "k": 5,
+  "repeats": 3,
+  "dataset_version": "cft-benchmark-v1",
+  "warning": "Metrics are valid only for expert-reviewed relevance labels and this exact indexed snapshot.",
+  "query_count": 10,
+  "results": {
+    "bm25": {
+      "query_count": 10,
+      "mean_precision_at_k": 0.1,
+      "mean_recall_at_k": 0.5,
+      "mean_mrr_at_k": 0.3583,
+      "mean_ndcg_at_k": 0.3931,
+      "latency_ms_mean": 5.72,
+      "latency_ms_p50": 4.95,
+      "latency_ms_p95": 8.28,
+      "repeatability_jaccard_at_k": 1.0,
+      "per_query": [
+        {
+          "id": "company_profile",
+          "query": "Когда была основана компания ЦФТ и чем она занимается?",
+          "expected_sources": 1,
+          "retrieved": [
+            {
+              "source_id": "ee3107d866079de4ea83062db1c7059aa901d3b442bb4e884ecc509c269fc5f6",
+              "title": "О нас – Работа в ЦФТ",
+              "score": 10.163056
+            },
+            {
+              "source_id": "d3ec9460e0044e9b1cebbefea227566ec75dff43fa651164c48daf50efd50656",
+              "title": "Платформа DBI – независимость от баз данных и среды исполнения",
+              "score": 8.777506
+            },
+            {
+              "source_id": "e8bb7593f32db50b4924430a42d067388bbea0628cb47e5dbb7982ed6897eedf",
+              "title": "Politics_1003100db3.pdf",
+              "score": 7.040411
+            },
+            {
+              "source_id": "e9bfb78c6162497252612f18395fae6f34b40f815ab2338c3d34de1e61821c70",
+              "title": "Politics.pdf",
+              "score": 7.033443
+            },
+            {
+              "source_id": "d770686ce6d43a50367aebce55d4969b0d2527db9eed876d6fb86d1255374df5",
+              "title": "Форма обучения",
+              "score": 6.7498665
+            }
+          ],
+          "precision_at_k": 0.0,
+          "recall_at_k": 0.0,
+          "mrr_at_k": 0.0,
+          "ndcg_at_k": 0.0
+        },
+        {
+          "id": "cft_bank",
+          "query": "Какие основные возможности есть у системы ЦФТ-Банк?",
+          "expected_sources": 1,
+          "retrieved": [
+            {
+              "source_id": "1637cdd9810d035a7d4e81174434361442da75f3332bb9dc1cecab0b87ff361e",
+              "title": "Сопровождение ЦФТ-Ритейл банк (РБС)",
+              "score": 14.915001
+            },
+            {
+              "source_id": "24818868e157cfa1d74ba66a616b9bbb7e2e24836bdaf9e462ce727eb88488b7",
+              "title": "Информация о компании «Центр Финансовых Технологий»",
+              "score": 14.696421
+            },
+            {
+              "source_id": "ace52cfa7bbdbf17ceac85e26bc9bfc691f25b570c2eae22d5f7a2e3231cb217",
+              "title": "Пакет «Навигатор. Базовый»",
+              "score": 13.1543
+            },
+            {
+              "source_id": "d7c1004694c6a1092a460b0e37c9000568247b17770b48baff88187c57288e65",
+              "title": "Программное обеспечение. Сопровождение",
+              "score": 12.36839
+            }
+          ],
+          "precision_at_k": 0.0,
+          "recall_at_k": 0.0,
+          "mrr_at_k": 0.0,
+          "ndcg_at_k": 0.0
+        },
+        {
+          "id": "corporation",
+          "query": "Для чего предназначен продукт ЦФТ-Корпорация?",
+          "expected_sources": 1,
+          "retrieved": [
+            {
+              "source_id": "19f5ec889c9d16fbfef9b58e0dec0232f0d7f8c41373e36f233b9fa78017cc37",
+              "title": "Преимущества – Работа в ЦФТ",
+              "score": 8.140209
+            },
+            {
+              "source_id": "43b52121091fc29c24354c516d3ff03fa92c0679f4b2f8f2fc154f3f473abf98",
+              "title": "Порядок обучения",
+              "score": 7.792449
+            },
+            {
+              "source_id": "d770686ce6d43a50367aebce55d4969b0d2527db9eed876d6fb86d1255374df5",
+              "title": "Форма обучения",
+              "score": 7.1149435
+            },
+            {
+              "source_id": "73e1078647063cb13354acae4a54c9c3da219367a4a23d2d12fee3b87fa57938",
+              "title": "ЦФТ-Корпорация",
+              "score": 7.108338
+            },
+            {
+              "source_id": "734f93707a9caafcb73bc9fb4a14ed6b041c58fadbcaa807e26cc9afa5c8afb4",
+              "title": "Учебный центр",
+              "score": 6.726264
+            }
+          ],
+          "precision_at_k": 0.2,
+          "recall_at_k": 1.0,
+          "mrr_at_k": 0.25,
+          "ndcg_at_k": 0.43067655807339306
+        },
+        {
+          "id": "platform_dbi",
+          "query": "Что такое платформа DBI и в чем ее особенность?",
+          "expected_sources": 1,
+          "retrieved": [
+            {
+              "source_id": "f862430e53f7e1edfede6d6b93b69cebb317277c022152537e165a4bd3569c0c",
+              "title": "ЦФТ-Банк в реестре отечественного ПО",
+              "score": 11.134777
+            },
+            {
+              "source_id": "3dd4da89818028b5422ca1dc3a91e9f645c235fa0fcc9d452e0320379ce50d09",
+              "title": "Программное обеспечение. Архитектура и платформы",
+              "score": 8.519744
+            },
+            {
+              "source_id": "d3ec9460e0044e9b1cebbefea227566ec75dff43fa651164c48daf50efd50656",
+              "title": "Платформа DBI – независимость от баз данных и среды исполнения",
+              "score": 8.479469
+            }
+          ],
+          "precision_at_k": 0.2,
+          "recall_at_k": 1.0,
+          "mrr_at_k": 0.3333333333333333,
+          "ndcg_at_k": 0.5
+        },
+        {
+          "id": "education",
+          "query": "Как устроено обучение в учебном центре ЦФТ?",
+          "expected_sources": 1,
+          "retrieved": [
+            {
+              "source_id": "b1acba09d077f64549aedb300fe7a8f8369ec30f3f97c16a4b1825a07d1e7597",
+              "title": "Обучение",
+              "score": 12.84602
+            },
+            {
+              "source_id": "258592e740293a18db72768b48097ee9fb5464daf6b0da5918024b6493e26c27",
+              "title": "Контакты",
+              "score": 10.40556
+            },
+            {
+              "source_id": "e8bb7593f32db50b4924430a42d067388bbea0628cb47e5dbb7982ed6897eedf",
+              "title": "Politics_1003100db3.pdf",
+              "score": 9.306139
+            }
+          ],
+          "precision_at_k": 0.0,
+          "recall_at_k": 0.0,
+          "mrr_at_k": 0.0,
+          "ndcg_at_k": 0.0
+        },
+        {
+          "id": "jobs",
+          "query": "Какие этапы собеседования предусмотрены при трудоустройстве в ЦФТ?",
+          "expected_sources": 1,
+          "retrieved": [
+            {
+              "source_id": "ace3545d2375e3ad55b7691e58911472b6d1f9598beedd77480763f0cb67a223",
+              "title": "Этапы собеседований – Работа в ЦФТ",
+              "score": 18.41875
+            },
+            {
+              "source_id": "88308dbe71bc7f95a69fe1430fc51f401bceb1720f71b913aa363983941bd390",
+              "title": "Все вакансии – Работа в ЦФТ",
+              "score": 12.884654
+            },
+            {
+              "source_id": "e8bb7593f32db50b4924430a42d067388bbea0628cb47e5dbb7982ed6897eedf",
+              "title": "Politics_1003100db3.pdf",
+              "score": 11.806419
+            },
+            {
+              "source_id": "19f5ec889c9d16fbfef9b58e0dec0232f0d7f8c41373e36f233b9fa78017cc37",
+              "title": "Преимущества – Работа в ЦФТ",
+              "score": 11.103561
+            }
+          ],
+          "precision_at_k": 0.2,
+          "recall_at_k": 1.0,
+          "mrr_at_k": 1.0,
+          "ndcg_at_k": 1.0
+        },
+        {
+          "id": "support",
+          "query": "Какие услуги сопровождения предлагает ЦФТ для ЦФТ-Банк и ЦФТ-Ритейл банк?",
+          "expected_sources": 1,
+          "retrieved": [
+            {
+              "source_id": "e6394ec02d28f34df81f9778f5a9d3a49313bdbcb6d9e1e5fb7c6a7021392ddb",
+              "title": "Программное обеспечение. Прайс-лист",
+              "score": 13.641777
+            },
+            {
+              "source_id": "1637cdd9810d035a7d4e81174434361442da75f3332bb9dc1cecab0b87ff361e",
+              "title": "Сопровождение ЦФТ-Ритейл банк (РБС)",
+              "score": 12.828438
+            },
+            {
+              "source_id": "d7c1004694c6a1092a460b0e37c9000568247b17770b48baff88187c57288e65",
+              "title": "Программное обеспечение. Сопровождение",
+              "score": 11.780258
+            },
+            {
+              "source_id": "b21fb2f6f934accbcbeeb92d5614d230c0d57940d4fc8f56b9d180e7288fd468",
+              "title": "Программное обеспечение. Услуги",
+              "score": 11.676266
+            }
+          ],
+          "precision_at_k": 0.0,
+          "recall_at_k": 0.0,
+          "mrr_at_k": 0.0,
+          "ndcg_at_k": 0.0
+        },
+        {
+          "id": "partner",
+          "query": "Какие направления включает партнерская программа ЦФТ?",
+          "expected_sources": 1,
+          "retrieved": [
+            {
+              "source_id": "9f64267accf063821a593995259085e82c0a5dec7f10d8744a748f603fb61aff",
+              "title": "Партнёрская программа ЦФТ",
+              "score": 13.602364
+            },
+            {
+              "source_id": "b7a4d4531c814c9058ad74dba0da7bff7f7d98d14ca4b7f2861b5e8635b4c221",
+              "title": "https://www.cft.ru/partnerregistration",
+              "score": 12.011913
+            },
+            {
+              "source_id": "43b52121091fc29c24354c516d3ff03fa92c0679f4b2f8f2fc154f3f473abf98",
+              "title": "Порядок обучения",
+              "score": 10.130421
+            },
+            {
+              "source_id": "ee3107d866079de4ea83062db1c7059aa901d3b442bb4e884ecc509c269fc5f6",
+              "title": "О нас – Работа в ЦФТ",
+              "score": 9.399345
+            },
+            {
+              "source_id": "57ac4af05fc607bde5490785ece848198ee1698b2f454e62be1accf369947cb7",
+              "title": "Тарифы",
+              "score": 9.382845
+            }
+          ],
+          "precision_at_k": 0.2,
+          "recall_at_k": 1.0,
+          "mrr_at_k": 1.0,
+          "ndcg_at_k": 1.0
+        },
+        {
+          "id": "testing",
+          "query": "Какие услуги по нагрузочному тестированию описаны в материалах ЦФТ?",
+          "expected_sources": 1,
+          "retrieved": [
+            {
+              "source_id": "513bc47a06e442c3ac7de8fb01398e7be4163a2d93a2da15439c1d9d8f46b5b7",
+              "title": "Нагрузочное тестирование",
+              "score": 17.08629
+            },
+            {
+              "source_id": "e6394ec02d28f34df81f9778f5a9d3a49313bdbcb6d9e1e5fb7c6a7021392ddb",
+              "title": "Программное обеспечение. Прайс-лист",
+              "score": 16.915167
+            },
+            {
+              "source_id": "b21fb2f6f934accbcbeeb92d5614d230c0d57940d4fc8f56b9d180e7288fd468",
+              "title": "Программное обеспечение. Услуги",
+              "score": 13.698408
+            }
+          ],
+          "precision_at_k": 0.2,
+          "recall_at_k": 1.0,
+          "mrr_at_k": 1.0,
+          "ndcg_at_k": 1.0
+        },
+        {
+          "id": "service_suite",
+          "query": "Что представляет собой ЦФТ-Сервис Сьют и для чего он нужен?",
+          "expected_sources": 1,
+          "retrieved": [
+            {
+              "source_id": "43b52121091fc29c24354c516d3ff03fa92c0679f4b2f8f2fc154f3f473abf98",
+              "title": "Порядок обучения",
+              "score": 12.649288
+            },
+            {
+              "source_id": "d770686ce6d43a50367aebce55d4969b0d2527db9eed876d6fb86d1255374df5",
+              "title": "Форма обучения",
+              "score": 11.845228
+            },
+            {
+              "source_id": "e8bb7593f32db50b4924430a42d067388bbea0628cb47e5dbb7982ed6897eedf",
+              "title": "Politics_1003100db3.pdf",
+              "score": 11.442625
+            },
+            {
+              "source_id": "e9bfb78c6162497252612f18395fae6f34b40f815ab2338c3d34de1e61821c70",
+              "title": "Politics.pdf",
+              "score": 11.35799
+            }
+          ],
+          "precision_at_k": 0.0,
+          "recall_at_k": 0.0,
+          "mrr_at_k": 0.0,
+          "ndcg_at_k": 0.0
+        }
+      ]
+    },
+    "e5": {
+      "query_count": 10,
+      "mean_precision_at_k": 0.14,
+      "mean_recall_at_k": 0.7,
+      "mean_mrr_at_k": 0.65,
+      "mean_ndcg_at_k": 0.6631,
+      "latency_ms_mean": 122.36,
+      "latency_ms_p50": 110.8,
+      "latency_ms_p95": 172.09,
+      "repeatability_jaccard_at_k": 1.0,
+      "per_query": [
+        {
+          "id": "company_profile",
+          "query": "Когда была основана компания ЦФТ и чем она занимается?",
+          "expected_sources": 1,
+          "retrieved": [
+            {
+              "source_id": "24818868e157cfa1d74ba66a616b9bbb7e2e24836bdaf9e462ce727eb88488b7",
+              "title": "Информация о компании «Центр Финансовых Технологий»",
+              "score": 0.848246
+            },
+            {
+              "source_id": "d2043027fec438f34918aa935b8de20fd21489428bbadd93074fcd2800c1cdae",
+              "title": "ЦФТ-Корпорация",
+              "score": 0.841839
+            },
+            {
+              "source_id": "635b3369d49615b44b1ce5a4f86eae4f0977580f489ac9cdb8ab7e676a2b012d",
+              "title": "Реквизиты компании",
+              "score": 0.8321823
+            },
+            {
+              "source_id": "88308dbe71bc7f95a69fe1430fc51f401bceb1720f71b913aa363983941bd390",
+              "title": "Все вакансии – Работа в ЦФТ",
+              "score": 0.8278471
+            }
+          ],
+          "precision_at_k": 0.2,
+          "recall_at_k": 1.0,
+          "mrr_at_k": 1.0,
+          "ndcg_at_k": 1.0
+        },
+        {
+          "id": "cft_bank",
+          "query": "Какие основные возможности есть у системы ЦФТ-Банк?",
+          "expected_sources": 1,
+          "retrieved": [
+            {
+              "source_id": "24818868e157cfa1d74ba66a616b9bbb7e2e24836bdaf9e462ce727eb88488b7",
+              "title": "Информация о компании «Центр Финансовых Технологий»",
+              "score": 0.88717973
+            },
+            {
+              "source_id": "d2043027fec438f34918aa935b8de20fd21489428bbadd93074fcd2800c1cdae",
+              "title": "ЦФТ-Корпорация",
+              "score": 0.86443347
+            },
+            {
+              "source_id": "e6394ec02d28f34df81f9778f5a9d3a49313bdbcb6d9e1e5fb7c6a7021392ddb",
+              "title": "Программное обеспечение. Прайс-лист",
+              "score": 0.863021
+            },
+            {
+              "source_id": "9f64267accf063821a593995259085e82c0a5dec7f10d8744a748f603fb61aff",
+              "title": "Партнёрская программа ЦФТ",
+              "score": 0.8616942
+            }
+          ],
+          "precision_at_k": 0.0,
+          "recall_at_k": 0.0,
+          "mrr_at_k": 0.0,
+          "ndcg_at_k": 0.0
+        },
+        {
+          "id": "corporation",
+          "query": "Для чего предназначен продукт ЦФТ-Корпорация?",
+          "expected_sources": 1,
+          "retrieved": [
+            {
+              "source_id": "d2043027fec438f34918aa935b8de20fd21489428bbadd93074fcd2800c1cdae",
+              "title": "ЦФТ-Корпорация",
+              "score": 0.87778157
+            },
+            {
+              "source_id": "e9bfb78c6162497252612f18395fae6f34b40f815ab2338c3d34de1e61821c70",
+              "title": "Politics.pdf",
+              "score": 0.85222304
+            },
+            {
+              "source_id": "513bc47a06e442c3ac7de8fb01398e7be4163a2d93a2da15439c1d9d8f46b5b7",
+              "title": "Нагрузочное тестирование",
+              "score": 0.84924436
+            },
+            {
+              "source_id": "716440457e78f3e144aa50b62dcdefe081347b6d3ad97436dc4003b6b3c171aa",
+              "title": "Программное обеспечение. ЦФТ и Postgres Professional: новый этап сотрудничества",
+              "score": 0.84924436
+            },
+            {
+              "source_id": "4b00b5e96af0fead48a549bf38e974d01dddab80043086de05b064b3ecf90bdb",
+              "title": "Запуск Продуктов/Приложений",
+              "score": 0.84924436
+            }
+          ],
+          "precision_at_k": 0.0,
+          "recall_at_k": 0.0,
+          "mrr_at_k": 0.0,
+          "ndcg_at_k": 0.0
+        },
+        {
+          "id": "platform_dbi",
+          "query": "Что такое платформа DBI и в чем ее особенность?",
+          "expected_sources": 1,
+          "retrieved": [
+            {
+              "source_id": "d3ec9460e0044e9b1cebbefea227566ec75dff43fa651164c48daf50efd50656",
+              "title": "Платформа DBI – независимость от баз данных и среды исполнения",
+              "score": 0.89905864
+            },
+            {
+              "source_id": "3dd4da89818028b5422ca1dc3a91e9f645c235fa0fcc9d452e0320379ce50d09",
+              "title": "Программное обеспечение. Архитектура и платформы",
+              "score": 0.87037504
+            },
+            {
+              "source_id": "d7c1004694c6a1092a460b0e37c9000568247b17770b48baff88187c57288e65",
+              "title": "Программное обеспечение. Сопровождение",
+              "score": 0.8592646
+            }
+          ],
+          "precision_at_k": 0.2,
+          "recall_at_k": 1.0,
+          "mrr_at_k": 1.0,
+          "ndcg_at_k": 1.0
+        },
+        {
+          "id": "education",
+          "query": "Как устроено обучение в учебном центре ЦФТ?",
+          "expected_sources": 1,
+          "retrieved": [
+            {
+              "source_id": "258592e740293a18db72768b48097ee9fb5464daf6b0da5918024b6493e26c27",
+              "title": "Контакты",
+              "score": 0.87081826
+            },
+            {
+              "source_id": "70309a4f1749fbee7682311649b205ae3624b854ffb1326ccf635861b0aea342",
+              "title": "Вопросы и ответы",
+              "score": 0.8649545
+            },
+            {
+              "source_id": "43b52121091fc29c24354c516d3ff03fa92c0679f4b2f8f2fc154f3f473abf98",
+              "title": "Порядок обучения",
+              "score": 0.86316943
+            },
+            {
+              "source_id": "635b3369d49615b44b1ce5a4f86eae4f0977580f489ac9cdb8ab7e676a2b012d",
+              "title": "Реквизиты компании",
+              "score": 0.858333
+            },
+            {
+              "source_id": "80a30778e3f664062f684527a66f2a46f8b9b10eb3f4b2ccd5e060857145cdcc",
+              "title": "Услуги по сопровождению ЦФТ-Банк, ЦФТ-Ритейл банк",
+              "score": 0.858333
+            }
+          ],
+          "precision_at_k": 0.0,
+          "recall_at_k": 0.0,
+          "mrr_at_k": 0.0,
+          "ndcg_at_k": 0.0
+        },
+        {
+          "id": "jobs",
+          "query": "Какие этапы собеседования предусмотрены при трудоустройстве в ЦФТ?",
+          "expected_sources": 1,
+          "retrieved": [
+            {
+              "source_id": "ace3545d2375e3ad55b7691e58911472b6d1f9598beedd77480763f0cb67a223",
+              "title": "Этапы собеседований – Работа в ЦФТ",
+              "score": 0.8956022
+            },
+            {
+              "source_id": "88308dbe71bc7f95a69fe1430fc51f401bceb1720f71b913aa363983941bd390",
+              "title": "Все вакансии – Работа в ЦФТ",
+              "score": 0.8766474
+            },
+            {
+              "source_id": "43b52121091fc29c24354c516d3ff03fa92c0679f4b2f8f2fc154f3f473abf98",
+              "title": "Порядок обучения",
+              "score": 0.852327
+            },
+            {
+              "source_id": "e8bb7593f32db50b4924430a42d067388bbea0628cb47e5dbb7982ed6897eedf",
+              "title": "Politics_1003100db3.pdf",
+              "score": 0.8449259
+            },
+            {
+              "source_id": "19f5ec889c9d16fbfef9b58e0dec0232f0d7f8c41373e36f233b9fa78017cc37",
+              "title": "Преимущества – Работа в ЦФТ",
+              "score": 0.8448721
+            }
+          ],
+          "precision_at_k": 0.2,
+          "recall_at_k": 1.0,
+          "mrr_at_k": 1.0,
+          "ndcg_at_k": 1.0
+        },
+        {
+          "id": "support",
+          "query": "Какие услуги сопровождения предлагает ЦФТ для ЦФТ-Банк и ЦФТ-Ритейл банк?",
+          "expected_sources": 1,
+          "retrieved": [
+            {
+              "source_id": "80a30778e3f664062f684527a66f2a46f8b9b10eb3f4b2ccd5e060857145cdcc",
+              "title": "Услуги по сопровождению ЦФТ-Банк, ЦФТ-Ритейл банк",
+              "score": 0.89245296
+            },
+            {
+              "source_id": "1637cdd9810d035a7d4e81174434361442da75f3332bb9dc1cecab0b87ff361e",
+              "title": "Сопровождение ЦФТ-Ритейл банк (РБС)",
+              "score": 0.88414156
+            },
+            {
+              "source_id": "d7c1004694c6a1092a460b0e37c9000568247b17770b48baff88187c57288e65",
+              "title": "Программное обеспечение. Сопровождение",
+              "score": 0.8724234
+            },
+            {
+              "source_id": "e6394ec02d28f34df81f9778f5a9d3a49313bdbcb6d9e1e5fb7c6a7021392ddb",
+              "title": "Программное обеспечение. Прайс-лист",
+              "score": 0.86922675
+            }
+          ],
+          "precision_at_k": 0.2,
+          "recall_at_k": 1.0,
+          "mrr_at_k": 1.0,
+          "ndcg_at_k": 1.0
+        },
+        {
+          "id": "partner",
+          "query": "Какие направления включает партнерская программа ЦФТ?",
+          "expected_sources": 1,
+          "retrieved": [
+            {
+              "source_id": "24818868e157cfa1d74ba66a616b9bbb7e2e24836bdaf9e462ce727eb88488b7",
+              "title": "Информация о компании «Центр Финансовых Технологий»",
+              "score": 0.9014231
+            },
+            {
+              "source_id": "9f64267accf063821a593995259085e82c0a5dec7f10d8744a748f603fb61aff",
+              "title": "Партнёрская программа ЦФТ",
+              "score": 0.87326753
+            },
+            {
+              "source_id": "716440457e78f3e144aa50b62dcdefe081347b6d3ad97436dc4003b6b3c171aa",
+              "title": "Программное обеспечение. ЦФТ и Postgres Professional: новый этап сотрудничества",
+              "score": 0.85012156
+            }
+          ],
+          "precision_at_k": 0.2,
+          "recall_at_k": 1.0,
+          "mrr_at_k": 0.5,
+          "ndcg_at_k": 0.6309297535714575
+        },
+        {
+          "id": "testing",
+          "query": "Какие услуги по нагрузочному тестированию описаны в материалах ЦФТ?",
+          "expected_sources": 1,
+          "retrieved": [
+            {
+              "source_id": "513bc47a06e442c3ac7de8fb01398e7be4163a2d93a2da15439c1d9d8f46b5b7",
+              "title": "Нагрузочное тестирование",
+              "score": 0.85152483
+            },
+            {
+              "source_id": "a72e47fe2e386f21d277065f707c8f58a157fa33620b6ce5e9c1fc2a7465f13b",
+              "title": "Тестовые дни",
+              "score": 0.84324384
+            },
+            {
+              "source_id": "def365e41f525a11f3d789512473eec05c65c1577991ef5f8b3acca9d51f2384",
+              "title": "Консультации по формированию обязательной отчетности",
+              "score": 0.84185845
+            },
+            {
+              "source_id": "716440457e78f3e144aa50b62dcdefe081347b6d3ad97436dc4003b6b3c171aa",
+              "title": "Программное обеспечение. ЦФТ и Postgres Professional: новый этап сотрудничества",
+              "score": 0.8414125
+            },
+            {
+              "source_id": "4b00b5e96af0fead48a549bf38e974d01dddab80043086de05b064b3ecf90bdb",
+              "title": "Запуск Продуктов/Приложений",
+              "score": 0.8414125
+            }
+          ],
+          "precision_at_k": 0.2,
+          "recall_at_k": 1.0,
+          "mrr_at_k": 1.0,
+          "ndcg_at_k": 1.0
+        },
+        {
+          "id": "service_suite",
+          "query": "Что представляет собой ЦФТ-Сервис Сьют и для чего он нужен?",
+          "expected_sources": 1,
+          "retrieved": [
+            {
+              "source_id": "78b3fd1ea08a93168ec5bec85f44b47fe2b4bf6749ae15bc59ebcce78910ffb5",
+              "title": "ЦФТ-Сервис Сьют (Service Suite) в реестре отечественного ПО",
+              "score": 0.8703282
+            },
+            {
+              "source_id": "3dd4da89818028b5422ca1dc3a91e9f645c235fa0fcc9d452e0320379ce50d09",
+              "title": "Программное обеспечение. Архитектура и платформы",
+              "score": 0.8464649
+            },
+            {
+              "source_id": "e6394ec02d28f34df81f9778f5a9d3a49313bdbcb6d9e1e5fb7c6a7021392ddb",
+              "title": "Программное обеспечение. Прайс-лист",
+              "score": 0.84534395
+            },
+            {
+              "source_id": "ace52cfa7bbdbf17ceac85e26bc9bfc691f25b570c2eae22d5f7a2e3231cb217",
+              "title": "Пакет «Навигатор. Базовый»",
+              "score": 0.84296846
+            },
+            {
+              "source_id": "e8bb7593f32db50b4924430a42d067388bbea0628cb47e5dbb7982ed6897eedf",
+              "title": "Politics_1003100db3.pdf",
+              "score": 0.84203756
+            }
+          ],
+          "precision_at_k": 0.2,
+          "recall_at_k": 1.0,
+          "mrr_at_k": 1.0,
+          "ndcg_at_k": 1.0
+        }
+      ]
+    },
+    "hybrid": {
+      "query_count": 10,
+      "mean_precision_at_k": 0.14,
+      "mean_recall_at_k": 0.7,
+      "mean_mrr_at_k": 0.65,
+      "mean_ndcg_at_k": 0.6631,
+      "latency_ms_mean": 136.76,
+      "latency_ms_p50": 128.5,
+      "latency_ms_p95": 204.57,
+      "repeatability_jaccard_at_k": 0.94,
+      "per_query": [
+        {
+          "id": "company_profile",
+          "query": "Когда была основана компания ЦФТ и чем она занимается?",
+          "expected_sources": 1,
+          "retrieved": [
+            {
+              "source_id": "24818868e157cfa1d74ba66a616b9bbb7e2e24836bdaf9e462ce727eb88488b7",
+              "title": "Информация о компании «Центр Финансовых Технологий»",
+              "score": 0.64285713
+            },
+            {
+              "source_id": "ee3107d866079de4ea83062db1c7059aa901d3b442bb4e884ecc509c269fc5f6",
+              "title": "О нас – Работа в ЦФТ",
+              "score": 0.5
+            },
+            {
+              "source_id": "d3ec9460e0044e9b1cebbefea227566ec75dff43fa651164c48daf50efd50656",
+              "title": "Платформа DBI – независимость от баз данных и среды исполнения",
+              "score": 0.33333334
+            },
+            {
+              "source_id": "e8bb7593f32db50b4924430a42d067388bbea0628cb47e5dbb7982ed6897eedf",
+              "title": "Politics_1003100db3.pdf",
+              "score": 0.25
+            }
+          ],
+          "precision_at_k": 0.2,
+          "recall_at_k": 1.0,
+          "mrr_at_k": 1.0,
+          "ndcg_at_k": 1.0
+        },
+        {
+          "id": "cft_bank",
+          "query": "Какие основные возможности есть у системы ЦФТ-Банк?",
+          "expected_sources": 1,
+          "retrieved": [
+            {
+              "source_id": "24818868e157cfa1d74ba66a616b9bbb7e2e24836bdaf9e462ce727eb88488b7",
+              "title": "Информация о компании «Центр Финансовых Технологий»",
+              "score": 0.8333334
+            },
+            {
+              "source_id": "1637cdd9810d035a7d4e81174434361442da75f3332bb9dc1cecab0b87ff361e",
+              "title": "Сопровождение ЦФТ-Ритейл банк (РБС)",
+              "score": 0.5
+            },
+            {
+              "source_id": "d2043027fec438f34918aa935b8de20fd21489428bbadd93074fcd2800c1cdae",
+              "title": "ЦФТ-Корпорация",
+              "score": 0.25
+            },
+            {
+              "source_id": "ace52cfa7bbdbf17ceac85e26bc9bfc691f25b570c2eae22d5f7a2e3231cb217",
+              "title": "Пакет «Навигатор. Базовый»",
+              "score": 0.25
+            }
+          ],
+          "precision_at_k": 0.0,
+          "recall_at_k": 0.0,
+          "mrr_at_k": 0.0,
+          "ndcg_at_k": 0.0
+        },
+        {
+          "id": "corporation",
+          "query": "Для чего предназначен продукт ЦФТ-Корпорация?",
+          "expected_sources": 1,
+          "retrieved": [
+            {
+              "source_id": "19f5ec889c9d16fbfef9b58e0dec0232f0d7f8c41373e36f233b9fa78017cc37",
+              "title": "Преимущества – Работа в ЦФТ",
+              "score": 0.5
+            },
+            {
+              "source_id": "d2043027fec438f34918aa935b8de20fd21489428bbadd93074fcd2800c1cdae",
+              "title": "ЦФТ-Корпорация",
+              "score": 0.5
+            },
+            {
+              "source_id": "43b52121091fc29c24354c516d3ff03fa92c0679f4b2f8f2fc154f3f473abf98",
+              "title": "Порядок обучения",
+              "score": 0.33333334
+            },
+            {
+              "source_id": "e9bfb78c6162497252612f18395fae6f34b40f815ab2338c3d34de1e61821c70",
+              "title": "Politics.pdf",
+              "score": 0.33333334
+            },
+            {
+              "source_id": "d770686ce6d43a50367aebce55d4969b0d2527db9eed876d6fb86d1255374df5",
+              "title": "Форма обучения",
+              "score": 0.25
+            }
+          ],
+          "precision_at_k": 0.0,
+          "recall_at_k": 0.0,
+          "mrr_at_k": 0.0,
+          "ndcg_at_k": 0.0
+        },
+        {
+          "id": "platform_dbi",
+          "query": "Что такое платформа DBI и в чем ее особенность?",
+          "expected_sources": 1,
+          "retrieved": [
+            {
+              "source_id": "d3ec9460e0044e9b1cebbefea227566ec75dff43fa651164c48daf50efd50656",
+              "title": "Платформа DBI – независимость от баз данных и среды исполнения",
+              "score": 0.5833333
+            },
+            {
+              "source_id": "f862430e53f7e1edfede6d6b93b69cebb317277c022152537e165a4bd3569c0c",
+              "title": "ЦФТ-Банк в реестре отечественного ПО",
+              "score": 0.5
+            },
+            {
+              "source_id": "3dd4da89818028b5422ca1dc3a91e9f645c235fa0fcc9d452e0320379ce50d09",
+              "title": "Программное обеспечение. Архитектура и платформы",
+              "score": 0.44444445
+            },
+            {
+              "source_id": "d7c1004694c6a1092a460b0e37c9000568247b17770b48baff88187c57288e65",
+              "title": "Программное обеспечение. Сопровождение",
+              "score": 0.3409091
+            }
+          ],
+          "precision_at_k": 0.2,
+          "recall_at_k": 1.0,
+          "mrr_at_k": 1.0,
+          "ndcg_at_k": 1.0
+        },
+        {
+          "id": "education",
+          "query": "Как устроено обучение в учебном центре ЦФТ?",
+          "expected_sources": 1,
+          "retrieved": [
+            {
+              "source_id": "258592e740293a18db72768b48097ee9fb5464daf6b0da5918024b6493e26c27",
+              "title": "Контакты",
+              "score": 0.8333334
+            },
+            {
+              "source_id": "b1acba09d077f64549aedb300fe7a8f8369ec30f3f97c16a4b1825a07d1e7597",
+              "title": "Обучение",
+              "score": 0.5
+            },
+            {
+              "source_id": "70309a4f1749fbee7682311649b205ae3624b854ffb1326ccf635861b0aea342",
+              "title": "Вопросы и ответы",
+              "score": 0.33333334
+            },
+            {
+              "source_id": "43b52121091fc29c24354c516d3ff03fa92c0679f4b2f8f2fc154f3f473abf98",
+              "title": "Порядок обучения",
+              "score": 0.25
+            },
+            {
+              "source_id": "e8bb7593f32db50b4924430a42d067388bbea0628cb47e5dbb7982ed6897eedf",
+              "title": "Politics_1003100db3.pdf",
+              "score": 0.25
+            }
+          ],
+          "precision_at_k": 0.0,
+          "recall_at_k": 0.0,
+          "mrr_at_k": 0.0,
+          "ndcg_at_k": 0.0
+        },
+        {
+          "id": "jobs",
+          "query": "Какие этапы собеседования предусмотрены при трудоустройстве в ЦФТ?",
+          "expected_sources": 1,
+          "retrieved": [
+            {
+              "source_id": "ace3545d2375e3ad55b7691e58911472b6d1f9598beedd77480763f0cb67a223",
+              "title": "Этапы собеседований – Работа в ЦФТ",
+              "score": 1.0
+            },
+            {
+              "source_id": "88308dbe71bc7f95a69fe1430fc51f401bceb1720f71b913aa363983941bd390",
+              "title": "Все вакансии – Работа в ЦФТ",
+              "score": 0.6666667
+            },
+            {
+              "source_id": "19f5ec889c9d16fbfef9b58e0dec0232f0d7f8c41373e36f233b9fa78017cc37",
+              "title": "Преимущества – Работа в ЦФТ",
+              "score": 0.33333334
+            },
+            {
+              "source_id": "e8bb7593f32db50b4924430a42d067388bbea0628cb47e5dbb7982ed6897eedf",
+              "title": "Politics_1003100db3.pdf",
+              "score": 0.28333333
+            }
+          ],
+          "precision_at_k": 0.2,
+          "recall_at_k": 1.0,
+          "mrr_at_k": 1.0,
+          "ndcg_at_k": 1.0
+        },
+        {
+          "id": "support",
+          "query": "Какие услуги сопровождения предлагает ЦФТ для ЦФТ-Банк и ЦФТ-Ритейл банк?",
+          "expected_sources": 1,
+          "retrieved": [
+            {
+              "source_id": "1637cdd9810d035a7d4e81174434361442da75f3332bb9dc1cecab0b87ff361e",
+              "title": "Сопровождение ЦФТ-Ритейл банк (РБС)",
+              "score": 0.6666667
+            },
+            {
+              "source_id": "80a30778e3f664062f684527a66f2a46f8b9b10eb3f4b2ccd5e060857145cdcc",
+              "title": "Услуги по сопровождению ЦФТ-Банк, ЦФТ-Ритейл банк",
+              "score": 0.6111111
+            },
+            {
+              "source_id": "e6394ec02d28f34df81f9778f5a9d3a49313bdbcb6d9e1e5fb7c6a7021392ddb",
+              "title": "Программное обеспечение. Прайс-лист",
+              "score": 0.5
+            },
+            {
+              "source_id": "d7c1004694c6a1092a460b0e37c9000568247b17770b48baff88187c57288e65",
+              "title": "Программное обеспечение. Сопровождение",
+              "score": 0.4
+            }
+          ],
+          "precision_at_k": 0.2,
+          "recall_at_k": 1.0,
+          "mrr_at_k": 0.5,
+          "ndcg_at_k": 0.6309297535714575
+        },
+        {
+          "id": "partner",
+          "query": "Какие направления включает партнерская программа ЦФТ?",
+          "expected_sources": 1,
+          "retrieved": [
+            {
+              "source_id": "9f64267accf063821a593995259085e82c0a5dec7f10d8744a748f603fb61aff",
+              "title": "Партнёрская программа ЦФТ",
+              "score": 0.8333334
+            },
+            {
+              "source_id": "24818868e157cfa1d74ba66a616b9bbb7e2e24836bdaf9e462ce727eb88488b7",
+              "title": "Информация о компании «Центр Финансовых Технологий»",
+              "score": 0.64285713
+            },
+            {
+              "source_id": "b7a4d4531c814c9058ad74dba0da7bff7f7d98d14ca4b7f2861b5e8635b4c221",
+              "title": "https://www.cft.ru/partnerregistration",
+              "score": 0.42424244
+            },
+            {
+              "source_id": "43b52121091fc29c24354c516d3ff03fa92c0679f4b2f8f2fc154f3f473abf98",
+              "title": "Порядок обучения",
+              "score": 0.3611111
+            }
+          ],
+          "precision_at_k": 0.2,
+          "recall_at_k": 1.0,
+          "mrr_at_k": 1.0,
+          "ndcg_at_k": 1.0
+        },
+        {
+          "id": "testing",
+          "query": "Какие услуги по нагрузочному тестированию описаны в материалах ЦФТ?",
+          "expected_sources": 1,
+          "retrieved": [
+            {
+              "source_id": "513bc47a06e442c3ac7de8fb01398e7be4163a2d93a2da15439c1d9d8f46b5b7",
+              "title": "Нагрузочное тестирование",
+              "score": 1.0
+            },
+            {
+              "source_id": "e6394ec02d28f34df81f9778f5a9d3a49313bdbcb6d9e1e5fb7c6a7021392ddb",
+              "title": "Программное обеспечение. Прайс-лист",
+              "score": 0.33333334
+            },
+            {
+              "source_id": "a72e47fe2e386f21d277065f707c8f58a157fa33620b6ce5e9c1fc2a7465f13b",
+              "title": "Тестовые дни",
+              "score": 0.33333334
+            },
+            {
+              "source_id": "b21fb2f6f934accbcbeeb92d5614d230c0d57940d4fc8f56b9d180e7288fd468",
+              "title": "Программное обеспечение. Услуги",
+              "score": 0.25
+            },
+            {
+              "source_id": "def365e41f525a11f3d789512473eec05c65c1577991ef5f8b3acca9d51f2384",
+              "title": "Консультации по формированию обязательной отчетности",
+              "score": 0.25
+            }
+          ],
+          "precision_at_k": 0.2,
+          "recall_at_k": 1.0,
+          "mrr_at_k": 1.0,
+          "ndcg_at_k": 1.0
+        },
+        {
+          "id": "service_suite",
+          "query": "Что представляет собой ЦФТ-Сервис Сьют и для чего он нужен?",
+          "expected_sources": 1,
+          "retrieved": [
+            {
+              "source_id": "78b3fd1ea08a93168ec5bec85f44b47fe2b4bf6749ae15bc59ebcce78910ffb5",
+              "title": "ЦФТ-Сервис Сьют (Service Suite) в реестре отечественного ПО",
+              "score": 0.64285713
+            },
+            {
+              "source_id": "43b52121091fc29c24354c516d3ff03fa92c0679f4b2f8f2fc154f3f473abf98",
+              "title": "Порядок обучения",
+              "score": 0.5
+            },
+            {
+              "source_id": "3dd4da89818028b5422ca1dc3a91e9f645c235fa0fcc9d452e0320379ce50d09",
+              "title": "Программное обеспечение. Архитектура и платформы",
+              "score": 0.33333334
+            },
+            {
+              "source_id": "d770686ce6d43a50367aebce55d4969b0d2527db9eed876d6fb86d1255374df5",
+              "title": "Форма обучения",
+              "score": 0.33333334
+            },
+            {
+              "source_id": "e8bb7593f32db50b4924430a42d067388bbea0628cb47e5dbb7982ed6897eedf",
+              "title": "Politics_1003100db3.pdf",
+              "score": 0.25
+            }
+          ],
+          "precision_at_k": 0.2,
+          "recall_at_k": 1.0,
+          "mrr_at_k": 1.0,
+          "ndcg_at_k": 1.0
+        }
+      ]
+    }
+  }
+}

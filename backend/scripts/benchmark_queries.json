@@ -1,0 +1,76 @@
+{
+  "version": "cft-benchmark-v1",
+  "description": "Начальный экспертный набор для сравнения режимов поиска. Перед защитой проверить каждый запрос и relevant_source_ids по реальным фрагментам текущего индекса; добавить/уточнить релевантные документы.",
+  "queries": [
+    {
+      "id": "company_profile",
+      "query": "Когда была основана компания ЦФТ и чем она занимается?",
+      "relevant_source_ids": [
+        "24818868e157cfa1d74ba66a616b9bbb7e2e24836bdaf9e462ce727eb88488b7"
+      ]
+    },
+    {
+      "id": "cft_bank",
+      "query": "Какие основные возможности есть у системы ЦФТ-Банк?",
+      "relevant_source_ids": [
+        "be797c1c0ca8abc9a9e847762868d6a911cded9940a002abf2568c9044149168"
+      ]
+    },
+    {
+      "id": "corporation",
+      "query": "Для чего предназначен продукт ЦФТ-Корпорация?",
+      "relevant_source_ids": [
+        "73e1078647063cb13354acae4a54c9c3da219367a4a23d2d12fee3b87fa57938"
+      ]
+    },
+    {
+      "id": "platform_dbi",
+      "query": "Что такое платформа DBI и в чем ее особенность?",
+      "relevant_source_ids": [
+        "d3ec9460e0044e9b1cebbefea227566ec75dff43fa651164c48daf50efd50656"
+      ]
+    },
+    {
+      "id": "education",
+      "query": "Как устроено обучение в учебном центре ЦФТ?",
+      "relevant_source_ids": [
+        "43b52121091fc29c24354c516d3ff03fa92c067f4b2f8f2fc154f3f473abf98"
+      ]
+    },
+    {
+      "id": "jobs",
+      "query": "Какие этапы собеседования предусмотрены при трудоустройстве в ЦФТ?",
+      "relevant_source_ids": [
+        "ace3545d2375e3ad55b7691e58911472b6d1f9598beedd77480763f0cb67a223"
+      ]
+    },
+    {
+      "id": "support",
+      "query": "Какие услуги сопровождения предлагает ЦФТ для ЦФТ-Банк и ЦФТ-Ритейл банк?",
+      "relevant_source_ids": [
+        "80a30778e3f664062f684527a66f2a46f8b9b10eb3f4b2ccd5e060857145cdcc"
+      ]
+    },
+    {
+      "id": "partner",
+      "query": "Какие направления включает партнерская программа ЦФТ?",
+      "relevant_source_ids": [
+        "9f64267accf063821a593995259085e82c0a5dec7f10d8744a748f603fb61aff"
+      ]
+    },
+    {
+      "id": "testing",
+      "query": "Какие услуги по нагрузочному тестированию описаны в материалах ЦФТ?",
+      "relevant_source_ids": [
+        "513bc47a06e442c3ac7de8fb01398e7be4163a2d93a2da15439c1d9d8f46b5b7"
+      ]
+    },
+    {
+      "id": "service_suite",
+      "query": "Что представляет собой ЦФТ-Сервис Сьют и для чего он нужен?",
+      "relevant_source_ids": [
+        "78b3fd1ea08a93168ec5bec85f44b47fe2b4bf6749ae15bc59ebcce78910ffb5"
+      ]
+    }
+  ]
+}
