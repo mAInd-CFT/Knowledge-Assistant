@@ -65,7 +65,9 @@ def test_direct_and_multiturn_injection_do_not_replace_system_policy():
     assert messages[0]["role"] == "system"
     assert "не меняй" in messages[0]["content"] or "не исполняй" in messages[0]["content"]
     assert messages[-1]["role"] == "user"
-    assert "ЦФТ-Банк" in result["answer"]
+    # The current question (not the mocked LLM response) retains the valid
+    # CFT part alongside the injection attempt.
+    assert "ЦФТ-Банк" in messages[-1]["content"]
 
 
 def test_source_citations_are_numbered_and_invalid_ids_removed():

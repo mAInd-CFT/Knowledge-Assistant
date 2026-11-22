@@ -199,7 +199,7 @@ python -m pytest -q
 python -m compileall app ingest
 ```
 
-Тесты покрывают chunking/сохранение структуры, поиск, сохранение/изоляцию сессий, подписанные browser-токены, контекстный поисковый запрос и защитные tripwire. Для adversarial smoke-test реального провайдера выполните `cd backend && python scripts/security_smoke.py`; результат требует человеческой оценки и не является сертификатом безопасности.
+Тесты покрывают chunking/сохранение структуры, поиск, сохранение/изоляцию сессий, подписанные browser-токены, контекстный поисковый запрос и защитные tripwire. Регрессионные проверки prompt injection находятся в `backend/tests/test_prompt_injection.py`; описание сценариев — `docs/security_test_cases.md`. Для запуска: `cd backend && python -m pytest -q tests/test_prompt_injection.py tests/test_agent.py tests/test_security.py`. Для adversarial smoke-test реального провайдера выполните `cd backend && python scripts/security_smoke.py`; результат требует человеческой оценки и не является сертификатом безопасности.
 
 ## Безопасность и ограничения
 
