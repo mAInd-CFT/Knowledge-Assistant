@@ -28,8 +28,10 @@ def build_retrieval_query(question: str, history: list[dict]) -> str:
         if item.get("role") == "assistant" and str(item.get("content", "")).strip()
     ), "")
     # Avoid polluting standalone questions with unrelated old turns.
-    referential = len(question.split()) <= 12 or bool(re.search(
-        r"(?i)\b(а|и|их|его|её|этот|эта|эти|там|тогда|также|подробнее|сравни|второй|первый)\b",
+    # Short does not automatically mean referential: a concise standalone
+    # question ("Как связаться с компанией?") must stay independent.
+    referential = bool(re.search(
+        r"(?i)\b(а|и|их|него|неё|его|её|этот|эта|эти|там|тогда|также|подробнее|сравни|второй|первый)\b",
         question,
     ))
     if not referential or not previous_user:
