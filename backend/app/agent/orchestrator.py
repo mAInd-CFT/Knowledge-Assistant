@@ -77,6 +77,10 @@ async def handle_chat(message: str, history: list[dict]) -> dict:
                 "source_id": chunk.get("source_id"),
                 "page": str(chunk["page"]) if chunk.get("page") else None,
                 "section": chunk.get("section"),
+                "version": chunk.get("product_version"),
+                "code": chunk.get("code"),
+                "type": chunk.get("item_type"),
+                "catalog": chunk.get("catalog"),
                 "metadata": {
                     "score": chunk.get("score"),
                     "version": chunk.get("version"),

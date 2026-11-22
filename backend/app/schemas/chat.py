@@ -28,6 +28,10 @@ class Source(APIModel):
     source_id: str | None = None
     page: str | None = None
     section: str | None = None
+    version: str | None = None
+    code: str | None = None
+    type: str | None = None
+    catalog: str | None = None
     metadata: dict[str, Any] | None = None
 
 

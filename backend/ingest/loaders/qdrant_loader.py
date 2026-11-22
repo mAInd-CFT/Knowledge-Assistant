@@ -79,6 +79,8 @@ def index_document(
     source_file: str | None = None,
     published_at: str | None = None,
     retrieved_at: str | None = None,
+    metadata: dict | None = None,
+    dedupe_content: bool = True,
 ) -> dict:
     source_uri = canonicalize_source(source_uri)
     # Preserve headings, paragraphs and page markers; whitespace normalization
@@ -91,20 +93,21 @@ def index_document(
     version = hashlib.sha256(normalized.encode("utf-8")).hexdigest()
     with SessionLocal() as db:
         current = db.get(Document, source_id)
-        duplicate = db.scalar(select(Document).where(
-            Document.active_version == version,
-            Document.source_id != source_id,
-            Document.scope == "cft",
-        ).limit(1))
-        if duplicate is not None:
-            return {
-                "source_id": source_id,
-                "version": version,
-                "chunks": 0,
-                "unchanged": True,
-                "duplicate": True,
-                "duplicate_of": duplicate.source_uri,
-            }
+        if dedupe_content:
+            duplicate = db.scalar(select(Document).where(
+                Document.active_version == version,
+                Document.source_id != source_id,
+                Document.scope == "cft",
+            ).limit(1))
+            if duplicate is not None:
+                return {
+                    "source_id": source_id,
+                    "version": version,
+                    "chunks": 0,
+                    "unchanged": True,
+                    "duplicate": True,
+                    "duplicate_of": duplicate.source_uri,
+                }
         if current and current.active_version == version:
             row = db.scalar(select(DocumentVersion).where(
                 DocumentVersion.source_id == source_id,
@@ -151,7 +154,11 @@ def index_document(
                     collection_name=settings.qdrant_collection,
                     payload={"source_uri": source_uri, "source_file": source_file or "", "title": title,
                              "retrieved_at": retrieved_dt.isoformat(),
-                             "published_at": published_dt.isoformat() if published_dt else None},
+                             "published_at": published_dt.isoformat() if published_dt else None,
+                             "product_version": (metadata or {}).get("product_version") or "",
+                             "code": (metadata or {}).get("code") or "",
+                             "item_type": (metadata or {}).get("item_type") or "",
+                             "catalog": (metadata or {}).get("catalog") or ""},
                     points=models.Filter(must=[
                         models.FieldCondition(key="source_id", match=models.MatchValue(value=source_id)),
                         models.FieldCondition(key="version", match=models.MatchValue(value=version)),
@@ -225,6 +232,10 @@ def index_document(
                 "page": page_number,
                 "retrieved_at": retrieved_at,
                 "published_at": published_at_dt.isoformat() if published_at_dt else None,
+                "product_version": (metadata or {}).get("product_version") or "",
+                "code": (metadata or {}).get("code") or "",
+                "item_type": (metadata or {}).get("item_type") or "",
+                "catalog": (metadata or {}).get("catalog") or "",
                 "is_active": False,
             },
         ))
